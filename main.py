@@ -1,5 +1,9 @@
+from PIL import Image
+
+
 def run():
-    pass
+    with Image.open("test.jpg") as img:
+        img.convert("RGB").save("test_picture.jpg", quality=30)
 
 
 if __name__ == "__main__":
