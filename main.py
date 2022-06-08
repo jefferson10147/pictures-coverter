@@ -15,7 +15,7 @@ def run():
     args = cli()
 
     img = Image.open(args.input)
-    img.convert("RGB").save(args.output, quality=int(args.quality))
+    img.convert("RGB").save(args.output, "JPEG", quality=int(args.quality))
 
     #with Image.open("test.jpg") as img:
     #    img.convert("RGB").save("test_picture.jpg", quality=30)
