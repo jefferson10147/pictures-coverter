@@ -1,5 +1,17 @@
 import argparse
+import os
 from PIL import Image
+
+
+def compress_file(file, save_path='./', quality=30):
+    img = Image.open(file)
+    img.convert("RGB").save(save_path, "JPEG", quality=int(quality))
+
+
+def compress_all_files(path, extension, save_path, quality):
+    for file in os.listdir(path):
+        if file.endswith(extension):
+            compress_file(file, save_path, quality)
 
 
 def cli():
