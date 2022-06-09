@@ -1,3 +1,5 @@
 .vscode/*
 .venv/*
 test.jpg
+input/*
+output/*
