@@ -20,7 +20,8 @@ def cli():
     parser.add_argument("-i", "--input", help="Input image", required=True)
     parser.add_argument("-o", "--output", help="Output image", required=True)
     parser.add_argument("-q", "--quality", help="Quality of output image", required=True)
-    
+    parser.add_argument("-a", "--all", help="Compress all files in directory", action="store_true")
+
     return parser.parse_args()
 
 
