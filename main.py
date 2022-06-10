@@ -26,7 +26,7 @@ def cli():
     return parser.parse_args()
 
 
-def run():
+def main():
     args = cli()
 
     if args.all:
@@ -36,4 +36,4 @@ def run():
     
     
 if __name__ == "__main__":
-    run()
+    main()
