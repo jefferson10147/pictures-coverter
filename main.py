@@ -4,6 +4,11 @@ import os
 from PIL import Image
 
 
+def convert_from_jpg_to_png(jpg_file, output_file):
+    img = Image.open(jpg_file)
+    img.convert("RGB").save(output_file, "PNG")
+
+
 def compress_file(file, save_path="./", quality=30):
     img = Image.open(file)
     img.convert("RGB").save(save_path, "JPEG", quality=int(quality))
@@ -19,9 +24,12 @@ def cli():
     parser = argparse.ArgumentParser(description="Convert image to jpg")
     parser.add_argument("-i", "--input", help="Input image", required=True)
     parser.add_argument("-o", "--output", help="Output image", required=True)
-    parser.add_argument("-q", "--quality", help="Quality of output image", required=True)
-    parser.add_argument("-a", "--all", help="Compress all files in directory", action="store_true")
-    parser.add_argument("-e", "--extension", help="Extension of files to compress", default=".jpg")
+    parser.add_argument("--inputfolder", help="Input folder", required=False, default="./")
+    parser.add_argument("--outputfolder", help="Output folder", required=False, default="./")
+    parser.add_argument("-q", "--quality", help="Quality of output image", required=False, default=30)
+    
+    # parser.add_argument("-a", "--all", help="Compress all files in directory", action="store_true")
+    # parser.add_argument("-e", "--extension", help="Extension of files to compress", default=".jpg")
 
     return parser.parse_args()
 
@@ -31,6 +39,8 @@ def main():
 
     if args.all:
         compress_all_files(args.input, args.extension, args.output, args.quality)
+    elif args.cjpg:
+        convert_from_jpg_to_png(args.input, args.output)
     else:
         compress_file(args.input, args.output, args.quality)
     
