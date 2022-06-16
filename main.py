@@ -60,6 +60,7 @@ def cli():
     parser.add_argument(
         "--from_png", help="Convert from png to jpg", action="store_true"
     )
+    parser.add_argument("-v", "--version", action="version", version="1.0")
 
     return parser.parse_args()
 
