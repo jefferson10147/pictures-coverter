@@ -4,14 +4,14 @@ import os
 from PIL import Image
 
 
-def convert_from_png_to_jpg(png_file, output_file):
-    img = Image.open(png_file)
-    img.convert("RGB").save(output_file, "JPEG")
+def convert_from_png_to_jpg(png_file, output_file, input_folder, output_folder):
+    img = Image.open(input_folder + png_file)
+    img.convert("RGB").save(output_folder + output_file, "JPEG")
 
 
-def convert_from_jpg_to_png(jpg_file, output_file):
-    img = Image.open(jpg_file)
-    img.convert("RGB").save(output_file, "PNG")
+def convert_from_jpg_to_png(jpg_file, output_file, input_folder, output_folder):
+    img = Image.open(input_folder + jpg_file)
+    img.convert("RGB").save(output_folder + output_file, "PNG")
 
 
 def compress_file(input_file, output_file, input_folder, output_folder, quality):
@@ -77,9 +77,13 @@ def main():
             args.quality,
         )
     elif args.from_png:
-        convert_from_png_to_jpg(args.input, args.output)
+        convert_from_png_to_jpg(
+            args.input, args.output, args.input_folder, args.output_folder
+        )
     elif args.from_jpg:
-        convert_from_jpg_to_png(args.input, args.output)
+        convert_from_jpg_to_png(
+            args.input, args.output, args.input_folder, args.output_folder
+        )
     else:
         compress_file(
             args.input, args.output, args.input_folder, args.output_folder, args.quality
