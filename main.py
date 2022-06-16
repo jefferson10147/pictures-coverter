@@ -4,6 +4,11 @@ import os
 from PIL import Image
 
 
+def convert_from_png_to_jpg(png_file, output_file):
+    img = Image.open(png_file)
+    img.convert("RGB").save(output_file, "JPEG")
+
+
 def convert_from_jpg_to_png(jpg_file, output_file):
     img = Image.open(jpg_file)
     img.convert("RGB").save(output_file, "PNG")
@@ -49,6 +54,12 @@ def cli():
     parser.add_argument(
         "--final_extension", help="Extension of files to compress", default=".png"
     )
+    parser.add_argument(
+        "--from_jpg", help="Convert from jpg to png", action="store_true"
+    )
+    parser.add_argument(
+        "--from_png", help="Convert from png to jpg", action="store_true"
+    )
 
     return parser.parse_args()
 
@@ -64,6 +75,10 @@ def main():
             args.final_extension,
             args.quality,
         )
+    elif args.from_png:
+        convert_from_png_to_jpg(args.input, args.output)
+    elif args.from_jpg:
+        convert_from_jpg_to_png(args.input, args.output)
     else:
         compress_file(
             args.input, args.output, args.input_folder, args.output_folder, args.quality
