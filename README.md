@@ -66,3 +66,18 @@ Examples:
 $python3 main.py --input_folder input_folder --output_folder post_output_folder --extension jpg  -- final_extension png --quality 100
 
 ```
+
+## Contact me
+
+<table>
+
+    <tr>
+        <td>
+            You may contact me at:
+            * Email: <a href="mailto:jefferson.montilla98@gmail.com">
+            * Telegram: <a href="https://t.me/jefferson10147">
+            * Instagram: <a href="https://www.instagram.com/jefferson10147/">
+        </td>
+    </tr>
+
+</table>
