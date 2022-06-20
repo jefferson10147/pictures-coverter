@@ -4,6 +4,23 @@ import os
 from PIL import Image
 
 
+logo = """
+                     .
+                    / V\
+                  / `  /
+                 <<   |
+                 /    |
+               /      |
+             /        |
+           /    \  \ /
+          (      ) | |
+  ________|   _/_  | |
+<__________\______)\__)
+
+PICTURES COMPRESSOR AND CONVERTER v1.0
+"""
+
+
 def convert_from_png_to_jpg(png_file, output_file, input_folder, output_folder):
     img = Image.open(input_folder + png_file)
     img.convert("RGB").save(output_folder + output_file, "JPEG")
@@ -66,6 +83,7 @@ def cli():
 
 
 def main():
+    print(logo)
     args = cli()
 
     if args.all:
