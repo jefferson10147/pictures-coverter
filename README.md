@@ -55,7 +55,21 @@ Examples:
 
 ```bash
 
-$python3 main.py --input_folder input_folder --output_folder post_output_folder --extension jpg  -- final_extension png --quality 100
+$python3 main.py - image.jpg -o image.png
+
+```
+
+* compress one picture to a specific quality:
+
+```bash
+$python3 main.py - image.jpg -o image.jpg -q 80
+
+```
+
+* Convert all pictures in a folder to a specific format:
+
+```bash
+$python3 main.py --input_folder input_folder --output_folder post_output_folder --extension jpg  -- final_extension png --quality 100 --all
 
 ```
 
