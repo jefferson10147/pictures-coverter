@@ -4,7 +4,9 @@ import os
 from PIL import Image
 
 
-logo = """
+VERSION = "1.0"
+
+logo = f"""
                      .
                     / V\
                   / `  /
@@ -17,7 +19,7 @@ logo = """
   ________|   _/_  | |
 <__________\______)\__)
 
-PICTURES COMPRESSOR AND CONVERTER v1.0
+PICTURES COMPRESSOR AND CONVERTER v{VERSION}
 """
 
 
@@ -77,7 +79,7 @@ def cli():
     parser.add_argument(
         "--from_png", help="Convert from png to jpg", action="store_true"
     )
-    parser.add_argument("-v", "--version", action="version", version="1.0")
+    parser.add_argument("-v", "--version", action="version", version=VERSION)
 
     return parser.parse_args()
 
