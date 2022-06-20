@@ -4,15 +4,7 @@
 
 ## Automation App
 
-<table>
-
-    <tr>
-        <td>
-            A <b>Python</b> script that converts pictures to a specific format. In the same way, it can compress pictures to a specific quality
-        </td>
-    </tr>
-
-</table>
+<p>A <b>Python</b> script that converts pictures to a specific format. In the same way, it can compress pictures to a specific quality</p>
 
 ## Installation and Usage (UNIX Systems)
 
@@ -69,15 +61,5 @@ $python3 main.py --input_folder input_folder --output_folder post_output_folder 
 
 ## Contact me
 
-<table>
-
-    <tr>
-        <td>
-            You may contact me at:
-            * Email: <a href="mailto:jefferson.montilla98@gmail.com">
-            * Telegram: <a href="https://t.me/jefferson10147">
-            * Instagram: <a href="https://www.instagram.com/jefferson10147/">
-        </td>
-    </tr>
-
-</table>
+* Email: jefferson.montilla98@gmail.com
+* Telegram: @jefferson10147
