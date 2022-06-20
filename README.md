@@ -1,6 +1,6 @@
 # pictures-coverter
 
-## ![Python_logo_Selenium](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Python_icon_%28black_and_white%29.svg/1024px-Python_icon_%28black_and_white%29.svg.png)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Python_icon_%28black_and_white%29.svg/1024px-Python_icon_%28black_and_white%29.svg.png" witdh="300px" height="300px">
 
 ## Automation App
 
